@@ -14,10 +14,10 @@
 -->
 <h2>My heroes</h2>
 <ul class="mockheroes">
-  <li *ngFor="let hero of mockheroes">
-    <button type="button" [class.selected]="hero===selectedHero" (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
+  <li *ngFor="let heroBass of mockheroes">
+    <button type="button" [class.selected]="heroBass===selectedHero" (click)="onSelect(heroBass)">
+      <span class="badge">{{heroBass.id}}</span>
+      <span class="name">{{heroBass.name}}</span>
     </button>
   </li>
 </ul>
