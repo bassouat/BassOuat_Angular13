@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Hero} from "../hero";
 import {HeroService} from "../hero.service";
-import {MessageService} from "../message.service"
+
 
 @Component({
   selector: 'app-heroes',
@@ -11,14 +11,8 @@ import {MessageService} from "../message.service"
 export class HeroesComponent implements OnInit {
 
   mockheroes: Hero[]=[];
-  selectedHero? : Hero;
-  onSelect(heroS: Hero) :void {
-    this.selectedHero = heroS;
 
-    //On utilise des quotes dans le sens gauche afin d'appliquer les valeurs dynamiques des id
-    this.messageService.add(`HeroesComponent: Selected hero id=${heroS.id}`);
-  }
-  constructor(private heroService : HeroService , private messageService : MessageService) { }
+  constructor(private heroService : HeroService ) { }
 
   getHeroes():void {
     this.heroService.getHeroes().subscribe(mockheroes => this.mockheroes = mockheroes)
