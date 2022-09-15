@@ -24,5 +24,12 @@ export class HeroService {
     return of(hero);
   }
 
+  getHero_by_Name(name: string | null):Observable<Hero> {
+    const heroName = MOCKHEROES.find(h => h.name === name)!;
+    this.messageService.add(`HeroService: fetched hero name=${name}`);
+  return of(heroName)
+  }
+
+
   constructor(private messageService : MessageService) { }
 }

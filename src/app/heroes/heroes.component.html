@@ -15,7 +15,7 @@
 <h2>My heroes</h2>
 <ul class="heroes">
   <li *ngFor="let heroBass of mockheroes">
-    <a routerLink="/detail/{{heroBass.id}}">
+    <a routerLink="/detail/{{heroBass.name}}">
       <span class="badge">{{heroBass.id}}</span> {{heroBass.name}}
     </a>
   </li>
