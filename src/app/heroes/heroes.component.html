@@ -24,9 +24,11 @@
 </div>
 <ul class="heroes">
   <li *ngFor="let heroBass of mockheroes">
-    <a routerLink="/detail/{{heroBass.name}}">
+    <a routerLink="/detail/{{heroBass.id}}">
       <span class="badge">{{heroBass.id}}</span> {{heroBass.name}}
     </a>
+    <button type="button" class="delete" title="delete hero"
+            (click)="delete(heroBass)">x</button>
   </li>
 </ul>
 
